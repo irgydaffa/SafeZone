@@ -1,13 +1,13 @@
 @extends('layout.app')
 @section('title', 'Tambah Karyawan')
 @section('content')
-    <h1 class="h3 mb-2 text-gray-800">Karyawan</h1>
+    <h1 class="h3 mb-2 text-gray-800">Diary Artikel</h1>
 
     <div class="row">
         <div class="col-6">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Form Tambah Karyawan</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Form Artikel diary</h6>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('karyawan.insert.action') }}" method="post">
@@ -27,15 +27,22 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Alamat</label>
+                            <label>kelas</label>
                             <textarea name="alamat" class="form-control"></textarea>
                             @error('alamat')
                                 {{ $message }}
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>No Telp</label>
-                            <input type="number" name="no_telp" class="form-control">
+                            <label>Tanggal </label>
+                            <input type="date" name="tanggal" class="form-control">
+                            @error('number')
+                                {{ $message }}
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>Isi diary</label>
+                            <textarea type="diary" name="diary" class="form-control"></textarea>
                             @error('number')
                                 {{ $message }}
                             @enderror
