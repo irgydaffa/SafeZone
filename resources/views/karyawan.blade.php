@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title', 'Dashboard')
 @section('content')
-    <h1 class="h3 mb-2 text-gray-800">Artikel Diary</h1>
+    <h1 class="h3 mb-2 text-gray-800">Artikel Diaryy</h1>
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('pesan') }}
@@ -40,8 +40,11 @@
                                 <td>{{ $item->tanggal }}</td>
                                 <td>{{ $item->diary }}</td>
                                 <td>
-                                    <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                    <a href="{{ route('karyawan.delete', $item->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin menghapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
+                                    <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i
+                                            class="fas fa-edit"></i> Edit</a>
+                                    <a href="{{ route('karyawan.delete', $item->id) }}" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Apakah yakin menghapus data ini?')"><i
+                                            class="fas fa-trash"></i> Hapus</a>
                                 </td>
                             </tr>
                         @endforeach
