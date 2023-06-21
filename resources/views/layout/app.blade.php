@@ -85,7 +85,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('karyawan') }}">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Diary Artikel</span></a>
             </li>
