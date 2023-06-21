@@ -1,7 +1,11 @@
 @extends('layout.app')
 @section('title', 'Dashboard')
 @section('content')
+<<<<<<< HEAD
     <h1 class="h3 mb-2 text-gray-800">Diary Artikel</h1>
+=======
+    <h1 class="h3 mb-2 text-gray-800">Artikel Diary</h1>
+>>>>>>> 4d9b69f94589ec309616e921456fb63dc50e2b87
 
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -23,9 +27,10 @@
                         <tr class="text-center">
                             <th>No</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Alamat</th>
-                            <th>No Telp</th>
+                            <th>email</th>
+                            <th>kelas</th>
+                            <th>tanggal</th>
+                            <th>diary</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -36,8 +41,9 @@
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->email }}</td>
-                                <td>{{ $item->alamat }}</td>
-                                <td>{{ $item->no_telp }}</td>
+                                <td>{{ $item->kelas }}</td>
+                                <td>{{ $item->tanggal }}</td>
+                                <td>{{ $item->diary }}</td>
                                 <td>
                                     <a href="{{ route('karyawan.edit', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                                     <a href="{{ route('karyawan.delete', $item->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin menghapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
