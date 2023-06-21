@@ -24,7 +24,7 @@ Route::get('guestDashboard', function () {
 })->name('guestDashboard');
 
 Route::controller(KaryawanController::class)->prefix('karyawan')->group(function () {
-    Route::get('', 'index')->name('karyawan');
+    Route::get('', 'index')->name('dashboard');
     Route::get('insert', 'insert')->name('karyawan.insert');
     Route::post('insert', 'insert_action')->name('karyawan.insert.action');
     Route::get('edit/{id}', 'edit')->name('karyawan.edit');

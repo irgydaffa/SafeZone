@@ -1,12 +1,7 @@
 @extends('layout.app')
 @section('title', 'Dashboard')
 @section('content')
-<<<<<<< HEAD
-    <h1 class="h3 mb-2 text-gray-800">Diary Artikel</h1>
-=======
     <h1 class="h3 mb-2 text-gray-800">Artikel Diary</h1>
->>>>>>> 4d9b69f94589ec309616e921456fb63dc50e2b87
-
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('pesan') }}
