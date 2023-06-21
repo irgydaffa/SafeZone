@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('title', 'Dashboard')
 @section('content')
-    <h1 class="h3 mb-2 text-gray-800">Artikel Diaryy</h1>
+    <h1 class="h3 mb-2 text-gray-800">Artikel Diaryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h1>
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('pesan') }}
