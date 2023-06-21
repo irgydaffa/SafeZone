@@ -19,6 +19,10 @@ Route::get('dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::get('guestDashboard', function () {
+    return view('guestDashboard');
+})->name('guestDashboard');
+
 Route::controller(KaryawanController::class)->prefix('karyawan')->group(function () {
     Route::get('', 'index')->name('karyawan');
     Route::get('insert', 'insert')->name('karyawan.insert');
@@ -30,5 +34,13 @@ Route::controller(KaryawanController::class)->prefix('karyawan')->group(function
 
 Auth::routes();
 
-Route::get('/', [KaryawanController::class, 'index']);
+Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->route('dashboard');
+    } else {
+        return redirect()->route('guestDashboard');
+    }
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
